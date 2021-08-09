@@ -16,6 +16,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
+import NotFound from "./NotFound";
 
 const useStyles = makeStyles({
     root: {
@@ -67,7 +68,7 @@ const ProductDetails = () => {
         <>
             {logo ? (
                 <LoadingLogo></LoadingLogo>
-            ) : (
+            ) : selectedProduct ? (
                 <Container className={classes.root}>
                     <Card className={classes.card}>
                         <Grid container>
@@ -122,6 +123,8 @@ const ProductDetails = () => {
                         </Grid>
                     </Card>
                 </Container>
+            ) : (
+                <NotFound></NotFound>
             )}
         </>
     );
