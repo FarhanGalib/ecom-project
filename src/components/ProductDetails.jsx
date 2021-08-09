@@ -114,7 +114,7 @@ const ProductDetails = () => {
                                         startIcon={<DeleteIcon />}
                                         variant="contained"
                                         color="secondary"
-                                        onClick={() => handleDeleteProduct()}
+                                        onClick={() => handleDeleteProduct(id)}
                                     >
                                         Delete
                                     </Button>
